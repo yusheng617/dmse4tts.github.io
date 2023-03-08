@@ -2,6 +2,12 @@
 <!DOCTYPE html>
 <html>
 
+<audio id="$player" src="$url"></audio>
+<div>
+    <button onclick="stopAllAudios(); document.getElementById('$player').play()">Play</button>
+    <button onclick="stopAudio(document.getElementById('$player'))">Stop</button>
+</div>
+
 <head>
     <style>
         table,
@@ -19,6 +25,19 @@
 
 <body>
 
+    <script>
+        function stopAudio(a) {
+            a.pause();
+            a.currentTime = 0;
+        }
+        function stopAllAudios() {
+            var a = document.getElementsByTagName('audio');
+            for (i = 0; i < a.length; i++) {
+                stopAudio(a[i]);
+            }
+        }
+    </script>
+
     <h3>1. Audio samples from the TTS listening test</h3>
 
     <table>
@@ -32,12 +51,12 @@
             <th>DMSEtext</th>
         </tr>
         <tr>
-            <td>"我以後都唔可以去游水 或者只係可以去泳池邊玩水"<br>"ngo5 ji5 hau6 dou1 m4 ho2 ji5 heoi3 jau4 seoi2 sil waak6 ze2 zi2 hai6 ho2 ji5 heoi3 wing6 ci4 bin1 wun6 seoi2"</td>
+            <!-- <td>"我以後都唔可以去游水 或者只係可以去泳池邊玩水"<br>"ngo5 ji5 hau6 dou1 m4 ho2 ji5 heoi3 jau4 seoi2 sil waak6 ze2 zi2 hai6 ho2 ji5 heoi3 wing6 ci4 bin1 wun6 seoi2"</td>
             <td><audio controls controlsList="nodownload">
                     <source src="tts_samples/Original/D1.wav" type="audio/wav">
                 </audio></td>
             <td><audio controls controlsList="nodownload">
-                    <source src="tts_samples/Demucus/D1.wav" type="audio/wav">
+                    <source src="tts_samples/Demucs/D1.wav" type="audio/wav">
                 </audio></td>
             <td><audio controls controlsList="nodownload">
                     <source src="tts_samples/VoiceFixer/D1.wav" type="audio/wav">
@@ -46,11 +65,49 @@
                     <source src="tts_samples/DMSEbase/D1.wav" type="audio/wav">
                 </audio></td>
             <td><audio controls controlsList="nodownload">
-                    <source src="tts_samples/DMSEbase(VCTK)/D1.wav" type="audio/wav">
+                    <source src="tts_samples/DMSEbase_VCTK/D1.wav" type="audio/wav">
                 </audio></td>
             <td><audio controls controlsList="nodownload">
                     <source src="tts_samples/DMSEtext/D1.wav" type="audio/wav">
-                </audio></td>
+                </audio></td> -->
+
+            <td>"我以後都唔可以去游水 或者只係可以去泳池邊玩水"<br>"ngo5 ji5 hau6 dou1 m4 ho2 ji5 heoi3 jau4 seoi2 sil waak6 ze2 zi2 hai6 ho2 ji5 heoi3 wing6 ci4 bin1 wun6 seoi2"</td>
+            <td><audio id='D1_ori' controls controlsList="nodownload">
+                    <source src="tts_samples/Original/D1.wav" type="audio/wav">
+                </audio>
+                <button onclick="stopAllAudios(); document.getElementById('D1_ori').play()">Play</button>
+                <button onclick="stopAudio(document.getElementById('D1_ori'))">Stop</button>
+            </td>
+            <td><audio id='D1_demucs' controls controlsList="nodownload">
+                    <source src="tts_samples/Demucs/D1.wav" type="audio/wav">
+                </audio>
+                <button onclick="stopAllAudios(); document.getElementById('D1_demucs').play()">Play</button>
+                <button onclick="stopAudio(document.getElementById('D1_demucs'))">Stop</button>
+            </td>
+            <td><audio id='D1_voicefixer' controls controlsList="nodownload">
+                    <source src="tts_samples/VoiceFixer/D1.wav" type="audio/wav">
+                </audio>
+                <button onclick="stopAllAudios(); document.getElementById('D1_voicefixer').play()">Play</button>
+                <button onclick="stopAudio(document.getElementById('D1_voicefixer'))">Stop</button>
+            </td>
+            <td><audio id='D1_diffnotext' controls controlsList="nodownload">
+                    <source src="tts_samples/DMSEbase/D1.wav" type="audio/wav">
+                </audio>
+                <button onclick="stopAllAudios(); document.getElementById('D1_diffnotext').play()">Play</button>
+                <button onclick="stopAudio(document.getElementById('D1_diffnotext'))">Stop</button>
+            </td>
+            <td><audio id='D1_diffvctk' controls controlsList="nodownload">
+                    <source src="tts_samples/DMSEbase_VCTK/D1.wav" type="audio/wav">
+                </audio>
+                <button onclick="stopAllAudios(); document.getElementById('D1_diffvctk').play()">Play</button>
+                <button onclick="stopAudio(document.getElementById('D1_diffvctk'))">Stop</button>
+            </td>
+            <td><audio id='D1_diff' controls controlsList="nodownload">
+                    <source src="tts_samples/DMSEtext/D1.wav" type="audio/wav">
+                </audio>
+                <button onclick="stopAllAudios(); document.getElementById('D1_diff').play()">Play</button>
+                <button onclick="stopAudio(document.getElementById('D1_diff'))">Stop</button>
+            </td>
         </tr>
 
     </table>
