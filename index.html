@@ -13,6 +13,9 @@
             width: 100%;
             border-collapse: collapse;
         }
+        td {
+        text-align: center;
+        }
     </style>
 </head>
 
@@ -48,39 +51,51 @@
             <td><audio id='D1_ori' style='display:none'>
                     <source src="tts_samples/Original/D1.wav" type="audio/wav">
                 </audio>
-                <button onclick="stopAllAudios(); document.getElementById('D1_ori').play()">Play</button>
-                <button onclick="stopAudio(document.getElementById('D1_ori'))">Stop</button>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('D1_ori').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('D1_ori'))">Stop</button>
+                </div> 
             </td>
             <td><audio id='D1_demucs' style='display:none'>
                     <source src="tts_samples/Demucs/D1.wav" type="audio/wav">
                 </audio>
-                <button onclick="stopAllAudios(); document.getElementById('D1_demucs').play()">Play</button>
-                <button onclick="stopAudio(document.getElementById('D1_demucs'))">Stop</button>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('D1_demucs').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('D1_demucs'))">Stop</button>
+                </div>
             </td>
             <td><audio id='D1_voicefixer' style='display:none'>
                     <source src="tts_samples/VoiceFixer/D1.wav" type="audio/wav">
                 </audio>
-                <button onclick="stopAllAudios(); document.getElementById('D1_voicefixer').play()">Play</button>
-                <button onclick="stopAudio(document.getElementById('D1_voicefixer'))">Stop</button>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('D1_voicefixer').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('D1_voicefixer'))">Stop</button>
+                </div>
             </td>
             <td><audio id='D1_diffnotext' style='display:none'>
                     <source src="tts_samples/DMSEbase/D1.wav" type="audio/wav">
                 </audio>
-                <button onclick="stopAllAudios(); document.getElementById('D1_diffnotext').play()">Play</button>
-                <button onclick="stopAudio(document.getElementById('D1_diffnotext'))">Stop</button>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('D1_diffnotext').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('D1_diffnotext'))">Stop</button>
+                </div>
             </td>
             <td><audio id='D1_diffvctk' style='display:none'>
                     <source src="tts_samples/DMSEbase_VCTK/D1.wav" type="audio/wav">
                 </audio>
-                <button onclick="stopAllAudios(); document.getElementById('D1_diffvctk').play()">Play</button>
-                <button onclick="stopAudio(document.getElementById('D1_diffvctk'))">Stop</button>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('D1_diffvctk').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('D1_diffvctk'))">Stop</button>
+                </div>
             </td>
             <td>
                 <audio id='D1_diff' style='display:none'>
                     <source src="tts_samples/DMSEtext/D1.wav" type="audio/wav">
                 </audio>
-                <button onclick="stopAllAudios(); document.getElementById('D1_diff').play()">Play</button>
-                <button onclick="stopAudio(document.getElementById('D1_diff'))">Stop</button>
+                <div>
+                    <button onclick="stopAllAudios(); document.getElementById('D1_diff').play()">Play</button>
+                    <button onclick="stopAudio(document.getElementById('D1_diff'))">Stop</button>
+                </div>
             </td>
         </tr>
 
